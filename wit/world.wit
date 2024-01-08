@@ -1,0 +1,19 @@
+package game:plugin
+
+
+
+interface version {
+    record v {
+        major: u32,
+        minor: u32,
+        release: u32,
+
+    }
+    get-version: func() -> v
+}
+
+world runner {
+    import version
+    import log: func(msg: string)
+    export run: func()
+}
